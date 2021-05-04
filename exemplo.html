@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function solucao(precos) {
+
+
+            let qtdCompra = [precos];
+            let qtdCompraFormatado = parseInt(qtdCompra[precos])
+            console.log(qtdCompraFormatado)
+
+            let soma = 0;
+
+            Array.min = function (array) {
+                return Math.min.apply(Math, array);
+            }
+
+            if (qtdCompra.length >= 5) {
+
+                //let menorValor = Array.min(precos);
+                for (i = 0; i < qtdCompra.length; i++) {
+                    soma += qtdCompra[i];
+                    console.log(soma);
+                    let total = soma - menorValor;
+                    //console.log(total);
+                }
+            } else {
+                for (i = 0; i < qtdCompra.length; i++) {
+                    soma += qtdCompra[i];
+                    console.log(soma);
+                }
+            }
+
+        solucao(100);
+        solucao(500);
+        solucao(100);
+        solucao(200);
+        solucao(50);
+    </script>
+</body>
+
+</html>
